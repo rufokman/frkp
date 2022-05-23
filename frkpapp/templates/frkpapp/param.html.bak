@@ -1,0 +1,21 @@
+{% extends 'frkpapp/base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+<div class = "container">
+    <h3>Формирование документа из ЕОСДО по шаблону</h3>
+    <hr>
+    <form action="." method="post">
+        {% csrf_token %}
+		{{ form}} <br>
+
+        <p></p>
+        <button type="submit" class='btn btn-outline-info btn-block'>Сформировать документ</button>
+
+    </form>
+    <hr>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'frkpapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+<div class = "container">
+    <h3>Формирование документа из ЕОСДО по шаблону</h3>
+    <hr>
+    <form action="." method="post">
+        {% csrf_token %}
+		{{ form|crispy }}
+
+        <p></p>
+        <div class="text-right">
+            <button onclick="myFunction()" type="submit" class='btn btn-outline-success'>Сформировать документ</button>
+            <script>
+            function myFunction() {
+              var txt;
+              if (confirm("Ваш запрос принят в обработку!")) {
+                txt = "You pressed OK!";
+              } else {
+                  txt = "You pressed Cancel!";
+              }
+            }
+            </script>
+        </div>
+
+    </form>
+    <hr>
+</div>
+
+{% endblock %}

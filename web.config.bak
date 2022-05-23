@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+            <add name="Django Handler" path="*" verb="*" modules="FastCgiModule" scriptProcessor="C:\Python\Python37\python.exe|C:\Python\Python37\Lib\site-packages\wfastcgi.py" resourceType="Unspecified" requireAccess="Script" />
+      <add name="Python FastCGI" path="*" verb="*" modules="FastCgiModule" scriptProcessor="C:\Users\a-bystrov-ai\Anaconda3\python.exe|C:\Users\a-bystrov-ai\Anaconda3\lib\site-packages\wfastcgi.py" resourceType="Unspecified" requireAccess="Script" />
+    </handlers>
+  </system.webServer>
+
+  <appSettings>
+    <add key="PYTHONPATH" value="C:\inetpub\wwwroot\frkp" />
+    <add key="WSGI_HANDLER" value="config.wsgi.application" />
+    <add key="DJANGO_SETTINGS_MODULE" value="config.settings.local" />
+  </appSettings>
+</configuration>
