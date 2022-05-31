@@ -6,15 +6,15 @@
 {% block content %}
 
 <div class = "container">
-    <h3>Формирование документа из ЕОСДО по шаблону</h3>
+    <h3>Редактирование запроса</h3>
     <hr>
-    <form action="." method="post">
+    <form method="post">
         {% csrf_token %}
 		{{ form|crispy }}
 
         <p></p>
         <div class="text-right">
-            <button onclick="myFunction()" type="submit" class='btn btn-outline-success'>Отправить</button>
+            <button onclick="myFunction()" type="submit" class='btn btn-outline-success'>Обновить запрос</button>
             <script>
             function myFunction() {
               var txt;
